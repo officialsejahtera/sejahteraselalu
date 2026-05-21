@@ -1,84 +1,451 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sejahtera Selalu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- =========================
+       GANTI SESUAI BISNIS ANDA
+  ========================== -->
+
+  <title>Sejahtera Selalu | Official Digital Platform</title>
+
+  <meta name="description" content="Website resmi Sejahtera Selalu sebagai platform digital, media informasi, komunitas online, dan layanan media sosial modern terpercaya.">
+
+  <meta name="keywords" content="Sejahtera Selalu, media digital, meta business, facebook page, komunitas online">
+
+  <!-- ========================= -->
 
   <style>
-    body{
+
+    *{
       margin:0;
-      font-family:Arial, sans-serif;
-      background:#0f172a;
-      color:white;
-      text-align:center;
+      padding:0;
+      box-sizing:border-box;
     }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#0b1120;
+      color:white;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:20px 0;
+      position:fixed;
+      top:0;
+      z-index:999;
+      background:rgba(11,17,32,0.95);
+      border-bottom:1px solid #1e293b;
+    }
+
+    .nav-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:bold;
+      color:white;
+    }
+
+    .menu{
+      display:flex;
+      gap:20px;
+    }
+
+    .menu a{
+      color:#cbd5e1;
+      transition:0.3s;
+    }
+
+    .menu a:hover{
+      color:white;
+    }
+
+    /* HERO */
 
     .hero{
-      padding:100px 20px;
+      padding-top:180px;
+      padding-bottom:120px;
+      text-align:center;
+      background:
+      linear-gradient(rgba(11,17,32,0.8), rgba(11,17,32,0.9)),
+      url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
     }
 
-    h1{
-      font-size:50px;
-      margin-bottom:10px;
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
     }
 
-    p{
-      max-width:700px;
+    .hero p{
+      max-width:800px;
       margin:auto;
-      line-height:1.7;
       color:#cbd5e1;
+      font-size:18px;
+    }
+
+    .buttons{
+      margin-top:40px;
     }
 
     .btn{
       display:inline-block;
-      margin:15px;
       padding:15px 30px;
-      border-radius:10px;
-      text-decoration:none;
-      color:white;
-      background:#2563eb;
+      margin:10px;
+      border-radius:12px;
+      font-weight:bold;
       transition:0.3s;
     }
 
-    .btn:hover{
+    .btn-primary{
+      background:#2563eb;
+      color:white;
+    }
+
+    .btn-primary:hover{
       background:#1d4ed8;
     }
 
-    footer{
-      margin-top:100px;
-      padding:20px;
-      color:#94a3b8;
-      border-top:1px solid #1e293b;
+    .btn-secondary{
+      background:#1e293b;
+      color:white;
+      border:1px solid #334155;
     }
+
+    .btn-secondary:hover{
+      background:#334155;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:38px;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+    }
+
+    /* CARDS */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#111827;
+      border:1px solid #1e293b;
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:#2563eb;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+    }
+
+    .card p{
+      color:#94a3b8;
+    }
+
+    /* ABOUT */
+
+    .about{
+      text-align:center;
+    }
+
+    .about p{
+      max-width:900px;
+      margin:auto;
+      color:#cbd5e1;
+      font-size:17px;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      background:#111827;
+      border:1px solid #1e293b;
+      padding:40px;
+      border-radius:20px;
+      max-width:800px;
+      margin:auto;
+    }
+
+    .contact-item{
+      margin-bottom:20px;
+    }
+
+    .contact-item strong{
+      display:block;
+      margin-bottom:5px;
+      color:white;
+    }
+
+    .contact-item span{
+      color:#94a3b8;
+    }
+
+    /* FOOTER */
+
+    footer{
+      border-top:1px solid #1e293b;
+      padding:30px 0;
+      text-align:center;
+      color:#94a3b8;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .menu{
+        display:none;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+  <div class="container nav-wrapper">
+
+    <!-- GANTI NAMA BRAND -->
+    <div class="logo">Sejahtera Selalu</div>
+
+    <div class="menu">
+      <a href="#about">Tentang</a>
+      <a href="#services">Layanan</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-  <h1>Sejahtera Selalu</h1>
 
-  <p>
-    Sejahtera Selalu merupakan platform digital yang berfokus pada
-    pengembangan informasi, media sosial, komunitas, dan layanan digital modern.
-    Kami hadir untuk membangun komunikasi yang terpercaya, profesional,
-    dan mudah diakses oleh masyarakat luas.
-  </p>
+  <div class="container">
 
-  <br>
+    <!-- GANTI JUDUL -->
+    <h1>Sejahtera Selalu</h1>
 
-  <a class="btn" href="https://facebook.com/" target="_blank">
-    Facebook Page
-  </a>
+    <!-- GANTI DESKRIPSI -->
+    <p>
+      Platform digital modern yang berfokus pada media informasi,
+      pengembangan komunitas online, layanan media sosial,
+      dan komunikasi digital terpercaya untuk masyarakat luas.
+    </p>
 
-  <a class="btn" href="https://wa.me/628xxxxxxxxxx" target="_blank">
-    WhatsApp
-  </a>
+    <div class="buttons">
+
+      <!-- GANTI LINK FACEBOOK -->
+      <a href="https://facebook.com/" class="btn btn-primary" target="_blank">
+        Facebook Page
+      </a>
+
+      <!-- GANTI NOMOR WA -->
+      <a href="https://wa.me/628xxxxxxxxxx" class="btn btn-secondary" target="_blank">
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
 </section>
 
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Tentang Kami</h2>
+      <p>Profil resmi platform digital</p>
+    </div>
+
+    <div class="about">
+
+      <!-- GANTI DESKRIPSI PROFIL -->
+      <p>
+        Sejahtera Selalu merupakan platform digital yang berfokus pada
+        pengembangan informasi, media sosial, komunitas online,
+        dan layanan digital modern. Kami hadir untuk membangun komunikasi
+        yang profesional, terpercaya, serta mudah diakses oleh masyarakat luas.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Layanan & Aktivitas</h2>
+      <p>Bidang utama platform kami</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Media Digital</h3>
+        <p>
+          Penyediaan informasi digital modern dan konten online terpercaya.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Komunitas Online</h3>
+        <p>
+          Pengembangan komunitas aktif melalui media sosial dan platform online.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Branding Media Sosial</h3>
+        <p>
+          Mendukung pengembangan identitas digital dan komunikasi profesional.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Layanan Informasi</h3>
+        <p>
+          Penyebaran informasi yang mudah diakses, cepat, dan terpercaya.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Informasi Bisnis</h2>
+      <p>Data resmi untuk kebutuhan verifikasi bisnis</p>
+    </div>
+
+    <div class="contact-box">
+
+      <!-- GANTI DATA SESUAI BISNIS -->
+
+      <div class="contact-item">
+        <strong>Nama Bisnis</strong>
+        <span>Sejahtera Selalu</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Email Bisnis</strong>
+        <span>emailanda@gmail.com</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Nomor WhatsApp</strong>
+        <span>+62 8xxxxxxxxxx</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Alamat</strong>
+        <span>Indonesia</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Facebook Page</strong>
+        <span>facebook.com/namapageanda</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Kategori Bisnis</strong>
+        <span>Digital Platform & Media Information</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  © 2026 Sejahtera Selalu - Official Website
+
+  <!-- GANTI TAHUN -->
+  © 2026 Sejahtera Selalu — Official Digital Platform
+
 </footer>
 
 </body>
