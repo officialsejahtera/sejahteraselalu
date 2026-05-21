@@ -208,7 +208,7 @@ background:#111827;
 padding:40px;
 border-radius:20px;
 border:1px solid #1e293b;
-max-width:800px;
+max-width:850px;
 margin:auto;
 }
 
@@ -223,6 +223,34 @@ margin-bottom:5px;
 
 .contact-item span{
 color:#94a3b8;
+}
+
+/* =========================
+BUSINESS HOURS
+========================= */
+
+.hours-box{
+margin-top:30px;
+padding:25px;
+background:#0b1220;
+border-radius:15px;
+border:1px solid #1e293b;
+}
+
+.hours-box h3{
+margin-bottom:20px;
+}
+
+.hours-item{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #1e293b;
+color:#cbd5e1;
+}
+
+.hours-item:last-child{
+border-bottom:none;
 }
 
 /* =========================
@@ -327,10 +355,6 @@ width:350px;
 border:1px solid #1e293b;
 }
 
-.login-card h2{
-margin-bottom:20px;
-}
-
 .login-card input{
 width:100%;
 padding:14px;
@@ -374,15 +398,15 @@ display:none;
 width:100%;
 }
 
+.hours-item{
+font-size:14px;
+}
+
 }
 
 </style>
 </head>
 <body>
-
-<!-- =========================
-HEADER
-========================= -->
 
 <header>
 <div class="container navbar">
@@ -399,10 +423,6 @@ Sejahtera Selalu
 
 </div>
 </header>
-
-<!-- =========================
-HERO
-========================= -->
 
 <section class="hero">
 
@@ -439,78 +459,6 @@ WhatsApp
 </div>
 
 </section>
-
-<!-- =========================
-ABOUT
-========================= -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Tentang Kami</h2>
-<p>Profil resmi platform digital</p>
-</div>
-
-<div class="about">
-
-<p id="aboutText">
-Sejahtera Selalu merupakan platform digital yang berfokus pada
-pengembangan informasi, media sosial, komunitas online,
-dan layanan digital modern terpercaya.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-SERVICES
-========================= -->
-
-<section id="services">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Layanan</h2>
-<p>Aktivitas utama platform</p>
-</div>
-
-<div class="grid">
-
-<div class="card">
-<h3>Media Digital</h3>
-<p>Informasi digital modern dan terpercaya.</p>
-</div>
-
-<div class="card">
-<h3>Komunitas Online</h3>
-<p>Membangun komunikasi online yang aktif.</p>
-</div>
-
-<div class="card">
-<h3>Branding Media</h3>
-<p>Pengembangan identitas digital profesional.</p>
-</div>
-
-<div class="card">
-<h3>Informasi Publik</h3>
-<p>Penyebaran informasi cepat dan mudah diakses.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-CONTACT
-========================= -->
 
 <section id="contact">
 
@@ -558,6 +506,51 @@ facebook.com/sejahteraselalu
 </span>
 </div>
 
+<!-- =========================
+BUSINESS HOURS
+========================= -->
+
+<div class="hours-box">
+
+<h3>Jam Operasional</h3>
+
+<div class="hours-item">
+<span>Senin</span>
+<span>08:00 - 22:00</span>
+</div>
+
+<div class="hours-item">
+<span>Selasa</span>
+<span>08:00 - 22:00</span>
+</div>
+
+<div class="hours-item">
+<span>Rabu</span>
+<span>08:00 - 22:00</span>
+</div>
+
+<div class="hours-item">
+<span>Kamis</span>
+<span>08:00 - 22:00</span>
+</div>
+
+<div class="hours-item">
+<span>Jumat</span>
+<span>08:00 - 22:00</span>
+</div>
+
+<div class="hours-item">
+<span>Sabtu</span>
+<span>09:00 - 23:00</span>
+</div>
+
+<div class="hours-item">
+<span>Minggu</span>
+<span>09:00 - 21:00</span>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -568,23 +561,32 @@ facebook.com/sejahteraselalu
 © 2026 Sejahtera Selalu — Official Website
 </footer>
 
-<!-- =========================
-OWNER BUTTON
-========================= -->
-
 <button class="owner-btn" onclick="openLogin()">
 ⚙
 </button>
-
-<!-- =========================
-LOGIN
-========================= -->
 
 <div class="login-box hidden" id="loginBox">
 
 <div class="login-card">
 
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+
 <h2>Owner Login</h2>
+
+<button onclick="closeLogin()"
+style="
+background:none;
+border:none;
+color:white;
+font-size:24px;
+cursor:pointer;
+width:auto;
+padding:0;
+">
+✕
+</button>
+
+</div>
 
 <input type="password"
 id="ownerPassword"
@@ -597,10 +599,6 @@ Masuk
 </div>
 
 </div>
-
-<!-- =========================
-OWNER PANEL
-========================= -->
 
 <div class="panel" id="panel">
 
@@ -642,10 +640,6 @@ Logout
 
 <script>
 
-/* =========================
-ANTI INSPECT BASIC
-========================= */
-
 document.addEventListener('contextmenu', function(e){
 e.preventDefault();
 });
@@ -670,18 +664,14 @@ return false;
 
 }
 
-/* =========================
-OWNER PASSWORD
-========================= */
-
 const OWNER_PASSWORD = "Pejoh1234";
-
-/* =========================
-LOGIN PANEL
-========================= */
 
 function openLogin(){
 document.getElementById('loginBox').classList.remove('hidden');
+}
+
+function closeLogin(){
+document.getElementById('loginBox').classList.add('hidden');
 }
 
 function loginOwner(){
@@ -697,8 +687,6 @@ document.getElementById('loginBox')
 document.getElementById('panel')
 .classList.add('active');
 
-loadInputs();
-
 }else{
 
 alert('Password salah');
@@ -713,143 +701,6 @@ document.getElementById('panel')
 .classList.remove('active');
 
 }
-
-/* =========================
-SAVE DATA
-========================= */
-
-function saveData(){
-
-localStorage.setItem(
-'brandName',
-document.getElementById('editTitle').value
-);
-
-localStorage.setItem(
-'heroDesc',
-document.getElementById('editDesc').value
-);
-
-localStorage.setItem(
-'facebookLink',
-document.getElementById('editFacebook').value
-);
-
-localStorage.setItem(
-'waLink',
-document.getElementById('editWA').value
-);
-
-localStorage.setItem(
-'emailData',
-document.getElementById('editEmail').value
-);
-
-localStorage.setItem(
-'addressData',
-document.getElementById('editAddress').value
-);
-
-loadWebsite();
-
-alert('Perubahan berhasil disimpan');
-
-}
-
-/* =========================
-LOAD WEBSITE
-========================= */
-
-function loadWebsite(){
-
-const brand =
-localStorage.getItem('brandName');
-
-const desc =
-localStorage.getItem('heroDesc');
-
-const fb =
-localStorage.getItem('facebookLink');
-
-const wa =
-localStorage.getItem('waLink');
-
-const email =
-localStorage.getItem('emailData');
-
-const address =
-localStorage.getItem('addressData');
-
-if(brand){
-
-document.getElementById('brandName').innerText = brand;
-document.getElementById('heroTitle').innerText = brand;
-document.getElementById('businessName').innerText = brand;
-
-}
-
-if(desc){
-
-document.getElementById('heroDesc').innerText = desc;
-document.getElementById('aboutText').innerText = desc;
-
-}
-
-if(fb){
-
-document.getElementById('facebookBtn').href = fb;
-document.getElementById('fbText').innerText = fb;
-
-}
-
-if(wa){
-
-document.getElementById('waBtn').href = wa;
-document.getElementById('waText').innerText = wa;
-
-}
-
-if(email){
-
-document.getElementById('emailText').innerText = email;
-
-}
-
-if(address){
-
-document.getElementById('addressText').innerText = address;
-
-}
-
-}
-
-/* =========================
-LOAD INPUTS
-========================= */
-
-function loadInputs(){
-
-document.getElementById('editTitle').value =
-localStorage.getItem('brandName') || '';
-
-document.getElementById('editDesc').value =
-localStorage.getItem('heroDesc') || '';
-
-document.getElementById('editFacebook').value =
-localStorage.getItem('facebookLink') || '';
-
-document.getElementById('editWA').value =
-localStorage.getItem('waLink') || '';
-
-document.getElementById('editEmail').value =
-localStorage.getItem('emailData') || '';
-
-document.getElementById('editAddress').value =
-localStorage.getItem('addressData') || '';
-
-}
-
-loadWebsite();
 
 </script>
 
