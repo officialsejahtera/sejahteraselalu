@@ -1,452 +1,857 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- =========================
-       GANTI SESUAI BISNIS ANDA
-  ========================== -->
+<title>Sejahtera Selalu</title>
 
-  <title>Sejahtera Selalu | Official Digital Platform</title>
+<meta name="description" content="Website resmi Sejahtera Selalu untuk kebutuhan media digital dan Meta Business verification.">
 
-  <meta name="description" content="Website resmi Sejahtera Selalu sebagai platform digital, media informasi, komunitas online, dan layanan media sosial modern terpercaya.">
+<style>
 
-  <meta name="keywords" content="Sejahtera Selalu, media digital, meta business, facebook page, komunitas online">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-  <!-- ========================= -->
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
 
-  <style>
+/* =========================
+NAVBAR
+========================= */
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+header{
+width:100%;
+padding:20px 0;
+background:#111827;
+border-bottom:1px solid #1e293b;
+position:sticky;
+top:0;
+z-index:999;
+}
 
-    body{
-      font-family:Arial, sans-serif;
-      background:#0b1120;
-      color:white;
-      line-height:1.6;
-    }
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
 
-    a{
-      text-decoration:none;
-    }
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    .container{
-      width:90%;
-      max-width:1200px;
-      margin:auto;
-    }
+.logo{
+font-size:24px;
+font-weight:bold;
+}
 
-    /* NAVBAR */
+.menu{
+display:flex;
+gap:20px;
+}
 
-    nav{
-      width:100%;
-      padding:20px 0;
-      position:fixed;
-      top:0;
-      z-index:999;
-      background:rgba(11,17,32,0.95);
-      border-bottom:1px solid #1e293b;
-    }
+.menu a{
+color:#cbd5e1;
+text-decoration:none;
+transition:0.3s;
+}
 
-    .nav-wrapper{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
+.menu a:hover{
+color:white;
+}
 
-    .logo{
-      font-size:24px;
-      font-weight:bold;
-      color:white;
-    }
+/* =========================
+HERO
+========================= */
 
-    .menu{
-      display:flex;
-      gap:20px;
-    }
+.hero{
+padding:120px 20px;
+text-align:center;
+background:
+linear-gradient(rgba(15,23,42,0.8),rgba(15,23,42,0.9)),
+url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+}
 
-    .menu a{
-      color:#cbd5e1;
-      transition:0.3s;
-    }
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
 
-    .menu a:hover{
-      color:white;
-    }
+.hero p{
+max-width:850px;
+margin:auto;
+line-height:1.8;
+color:#cbd5e1;
+font-size:18px;
+}
 
-    /* HERO */
+.buttons{
+margin-top:40px;
+}
 
-    .hero{
-      padding-top:180px;
-      padding-bottom:120px;
-      text-align:center;
-      background:
-      linear-gradient(rgba(11,17,32,0.8), rgba(11,17,32,0.9)),
-      url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-    }
+.btn{
+display:inline-block;
+padding:15px 30px;
+margin:10px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
 
-    .hero h1{
-      font-size:60px;
-      margin-bottom:20px;
-    }
+.btn-primary{
+background:#2563eb;
+color:white;
+}
 
-    .hero p{
-      max-width:800px;
-      margin:auto;
-      color:#cbd5e1;
-      font-size:18px;
-    }
+.btn-primary:hover{
+background:#1d4ed8;
+}
 
-    .buttons{
-      margin-top:40px;
-    }
+.btn-secondary{
+background:#1e293b;
+color:white;
+border:1px solid #334155;
+}
 
-    .btn{
-      display:inline-block;
-      padding:15px 30px;
-      margin:10px;
-      border-radius:12px;
-      font-weight:bold;
-      transition:0.3s;
-    }
+.btn-secondary:hover{
+background:#334155;
+}
 
-    .btn-primary{
-      background:#2563eb;
-      color:white;
-    }
+/* =========================
+SECTION
+========================= */
 
-    .btn-primary:hover{
-      background:#1d4ed8;
-    }
+section{
+padding:90px 0;
+}
 
-    .btn-secondary{
-      background:#1e293b;
-      color:white;
-      border:1px solid #334155;
-    }
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
 
-    .btn-secondary:hover{
-      background:#334155;
-    }
+.section-title h2{
+font-size:40px;
+margin-bottom:10px;
+}
 
-    /* SECTION */
+.section-title p{
+color:#94a3b8;
+}
 
-    section{
-      padding:90px 0;
-    }
+/* =========================
+CARDS
+========================= */
 
-    .section-title{
-      text-align:center;
-      margin-bottom:50px;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-    .section-title h2{
-      font-size:38px;
-      margin-bottom:10px;
-    }
+.card{
+background:#111827;
+padding:30px;
+border-radius:20px;
+border:1px solid #1e293b;
+transition:0.3s;
+}
 
-    .section-title p{
-      color:#94a3b8;
-    }
+.card:hover{
+transform:translateY(-5px);
+border-color:#2563eb;
+}
 
-    /* CARDS */
+.card h3{
+margin-bottom:15px;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
+.card p{
+color:#94a3b8;
+line-height:1.7;
+}
 
-    .card{
-      background:#111827;
-      border:1px solid #1e293b;
-      padding:30px;
-      border-radius:20px;
-      transition:0.3s;
-    }
+/* =========================
+ABOUT
+========================= */
 
-    .card:hover{
-      transform:translateY(-5px);
-      border-color:#2563eb;
-    }
+.about{
+text-align:center;
+max-width:900px;
+margin:auto;
+}
 
-    .card h3{
-      margin-bottom:15px;
-    }
+.about p{
+line-height:1.9;
+color:#cbd5e1;
+font-size:17px;
+}
 
-    .card p{
-      color:#94a3b8;
-    }
+/* =========================
+CONTACT
+========================= */
 
-    /* ABOUT */
+.contact-box{
+background:#111827;
+padding:40px;
+border-radius:20px;
+border:1px solid #1e293b;
+max-width:800px;
+margin:auto;
+}
 
-    .about{
-      text-align:center;
-    }
+.contact-item{
+margin-bottom:20px;
+}
 
-    .about p{
-      max-width:900px;
-      margin:auto;
-      color:#cbd5e1;
-      font-size:17px;
-    }
+.contact-item strong{
+display:block;
+margin-bottom:5px;
+}
 
-    /* CONTACT */
+.contact-item span{
+color:#94a3b8;
+}
 
-    .contact-box{
-      background:#111827;
-      border:1px solid #1e293b;
-      padding:40px;
-      border-radius:20px;
-      max-width:800px;
-      margin:auto;
-    }
+/* =========================
+FOOTER
+========================= */
 
-    .contact-item{
-      margin-bottom:20px;
-    }
+footer{
+padding:30px;
+text-align:center;
+color:#94a3b8;
+border-top:1px solid #1e293b;
+}
 
-    .contact-item strong{
-      display:block;
-      margin-bottom:5px;
-      color:white;
-    }
+/* =========================
+OWNER BUTTON
+========================= */
 
-    .contact-item span{
-      color:#94a3b8;
-    }
+.owner-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+background:#2563eb;
+color:white;
+font-size:22px;
+cursor:pointer;
+z-index:9999;
+box-shadow:0 0 20px rgba(37,99,235,0.5);
+}
 
-    /* FOOTER */
+/* =========================
+OWNER PANEL
+========================= */
 
-    footer{
-      border-top:1px solid #1e293b;
-      padding:30px 0;
-      text-align:center;
-      color:#94a3b8;
-    }
+.panel{
+position:fixed;
+top:0;
+right:-420px;
+width:400px;
+height:100%;
+background:#111827;
+border-left:1px solid #1e293b;
+padding:25px;
+transition:0.4s;
+overflow:auto;
+z-index:10000;
+}
 
-    /* RESPONSIVE */
+.panel.active{
+right:0;
+}
 
-    @media(max-width:768px){
+.panel h2{
+margin-bottom:20px;
+}
 
-      .hero h1{
-        font-size:42px;
-      }
+.panel input,
+.panel textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+}
 
-      .menu{
-        display:none;
-      }
+.panel button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+font-weight:bold;
+cursor:pointer;
+margin-bottom:10px;
+}
 
-    }
+/* =========================
+LOGIN
+========================= */
 
-  </style>
+.login-box{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.8);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:20000;
+}
+
+.login-card{
+background:#111827;
+padding:30px;
+border-radius:20px;
+width:350px;
+border:1px solid #1e293b;
+}
+
+.login-card h2{
+margin-bottom:20px;
+}
+
+.login-card input{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+margin-bottom:15px;
+}
+
+.login-card button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.hidden{
+display:none;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.menu{
+display:none;
+}
+
+.panel{
+width:100%;
+}
+
+}
+
+</style>
 </head>
-
 <body>
 
 <!-- =========================
-     NAVBAR
+HEADER
 ========================= -->
 
-<nav>
-  <div class="container nav-wrapper">
+<header>
+<div class="container navbar">
 
-    <!-- GANTI NAMA BRAND -->
-    <div class="logo">Sejahtera Selalu</div>
+<div class="logo" id="brandName">
+Sejahtera Selalu
+</div>
 
-    <div class="menu">
-      <a href="#about">Tentang</a>
-      <a href="#services">Layanan</a>
-      <a href="#contact">Kontak</a>
-    </div>
+<div class="menu">
+<a href="#about">Tentang</a>
+<a href="#services">Layanan</a>
+<a href="#contact">Kontak</a>
+</div>
 
-  </div>
-</nav>
+</div>
+</header>
 
 <!-- =========================
-     HERO
+HERO
 ========================= -->
 
 <section class="hero">
 
-  <div class="container">
+<div class="container">
 
-    <!-- GANTI JUDUL -->
-    <h1>Sejahtera Selalu</h1>
+<h1 id="heroTitle">
+Sejahtera Selalu
+</h1>
 
-    <!-- GANTI DESKRIPSI -->
-    <p>
-      Platform digital modern yang berfokus pada media informasi,
-      pengembangan komunitas online, layanan media sosial,
-      dan komunikasi digital terpercaya untuk masyarakat luas.
-    </p>
+<p id="heroDesc">
+Platform digital modern yang berfokus pada media informasi,
+pengembangan komunitas online, layanan media sosial,
+dan komunikasi terpercaya untuk masyarakat luas.
+</p>
 
-    <div class="buttons">
+<div class="buttons">
 
-      <!-- GANTI LINK FACEBOOK -->
-      <a href="https://facebook.com/" class="btn btn-primary" target="_blank">
-        Facebook Page
-      </a>
+<a id="facebookBtn"
+href="https://facebook.com/"
+target="_blank"
+class="btn btn-primary">
+Facebook Page
+</a>
 
-      <!-- GANTI NOMOR WA -->
-      <a href="https://wa.me/628xxxxxxxxxx" class="btn btn-secondary" target="_blank">
-        WhatsApp
-      </a>
+<a id="waBtn"
+href="https://wa.me/628123456789"
+target="_blank"
+class="btn btn-secondary">
+WhatsApp
+</a>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
 <!-- =========================
-     ABOUT
+ABOUT
 ========================= -->
 
 <section id="about">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>Tentang Kami</h2>
-      <p>Profil resmi platform digital</p>
-    </div>
+<div class="section-title">
+<h2>Tentang Kami</h2>
+<p>Profil resmi platform digital</p>
+</div>
 
-    <div class="about">
+<div class="about">
 
-      <!-- GANTI DESKRIPSI PROFIL -->
-      <p>
-        Sejahtera Selalu merupakan platform digital yang berfokus pada
-        pengembangan informasi, media sosial, komunitas online,
-        dan layanan digital modern. Kami hadir untuk membangun komunikasi
-        yang profesional, terpercaya, serta mudah diakses oleh masyarakat luas.
-      </p>
+<p id="aboutText">
+Sejahtera Selalu merupakan platform digital yang berfokus pada
+pengembangan informasi, media sosial, komunitas online,
+dan layanan digital modern terpercaya.
+</p>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
 <!-- =========================
-     SERVICES
+SERVICES
 ========================= -->
 
 <section id="services">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>Layanan & Aktivitas</h2>
-      <p>Bidang utama platform kami</p>
-    </div>
+<div class="section-title">
+<h2>Layanan</h2>
+<p>Aktivitas utama platform</p>
+</div>
 
-    <div class="grid">
+<div class="grid">
 
-      <div class="card">
-        <h3>Media Digital</h3>
-        <p>
-          Penyediaan informasi digital modern dan konten online terpercaya.
-        </p>
-      </div>
+<div class="card">
+<h3>Media Digital</h3>
+<p>Informasi digital modern dan terpercaya.</p>
+</div>
 
-      <div class="card">
-        <h3>Komunitas Online</h3>
-        <p>
-          Pengembangan komunitas aktif melalui media sosial dan platform online.
-        </p>
-      </div>
+<div class="card">
+<h3>Komunitas Online</h3>
+<p>Membangun komunikasi online yang aktif.</p>
+</div>
 
-      <div class="card">
-        <h3>Branding Media Sosial</h3>
-        <p>
-          Mendukung pengembangan identitas digital dan komunikasi profesional.
-        </p>
-      </div>
+<div class="card">
+<h3>Branding Media</h3>
+<p>Pengembangan identitas digital profesional.</p>
+</div>
 
-      <div class="card">
-        <h3>Layanan Informasi</h3>
-        <p>
-          Penyebaran informasi yang mudah diakses, cepat, dan terpercaya.
-        </p>
-      </div>
+<div class="card">
+<h3>Informasi Publik</h3>
+<p>Penyebaran informasi cepat dan mudah diakses.</p>
+</div>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
 <!-- =========================
-     CONTACT
+CONTACT
 ========================= -->
 
 <section id="contact">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>Informasi Bisnis</h2>
-      <p>Data resmi untuk kebutuhan verifikasi bisnis</p>
-    </div>
+<div class="section-title">
+<h2>Informasi Bisnis</h2>
+<p>Data resmi untuk Meta Business</p>
+</div>
 
-    <div class="contact-box">
+<div class="contact-box">
 
-      <!-- GANTI DATA SESUAI BISNIS -->
+<div class="contact-item">
+<strong>Nama Bisnis</strong>
+<span id="businessName">
+Sejahtera Selalu
+</span>
+</div>
 
-      <div class="contact-item">
-        <strong>Nama Bisnis</strong>
-        <span>Sejahtera Selalu</span>
-      </div>
+<div class="contact-item">
+<strong>Email</strong>
+<span id="emailText">
+emailanda@gmail.com
+</span>
+</div>
 
-      <div class="contact-item">
-        <strong>Email Bisnis</strong>
-        <span>emailanda@gmail.com</span>
-      </div>
+<div class="contact-item">
+<strong>WhatsApp</strong>
+<span id="waText">
++62 8123456789
+</span>
+</div>
 
-      <div class="contact-item">
-        <strong>Nomor WhatsApp</strong>
-        <span>+62 8xxxxxxxxxx</span>
-      </div>
+<div class="contact-item">
+<strong>Alamat</strong>
+<span id="addressText">
+Indonesia
+</span>
+</div>
 
-      <div class="contact-item">
-        <strong>Alamat</strong>
-        <span>Indonesia</span>
-      </div>
+<div class="contact-item">
+<strong>Facebook Page</strong>
+<span id="fbText">
+facebook.com/sejahteraselalu
+</span>
+</div>
 
-      <div class="contact-item">
-        <strong>Facebook Page</strong>
-        <span>facebook.com/namapageanda</span>
-      </div>
+</div>
 
-      <div class="contact-item">
-        <strong>Kategori Bisnis</strong>
-        <span>Digital Platform & Media Information</span>
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
+<footer>
+© 2026 Sejahtera Selalu — Official Website
+</footer>
+
 <!-- =========================
-     FOOTER
+OWNER BUTTON
 ========================= -->
 
-<footer>
+<button class="owner-btn" onclick="openLogin()">
+⚙
+</button>
 
-  <!-- GANTI TAHUN -->
-  © 2026 Sejahtera Selalu — Official Digital Platform
+<!-- =========================
+LOGIN
+========================= -->
 
-</footer>
+<div class="login-box hidden" id="loginBox">
+
+<div class="login-card">
+
+<h2>Owner Login</h2>
+
+<input type="password"
+id="ownerPassword"
+placeholder="Masukkan Password">
+
+<button onclick="loginOwner()">
+Masuk
+</button>
+
+</div>
+
+</div>
+
+<!-- =========================
+OWNER PANEL
+========================= -->
+
+<div class="panel" id="panel">
+
+<h2>Owner Panel</h2>
+
+<input type="text"
+id="editTitle"
+placeholder="Nama Brand">
+
+<textarea id="editDesc"
+rows="5"
+placeholder="Deskripsi"></textarea>
+
+<input type="text"
+id="editFacebook"
+placeholder="Link Facebook">
+
+<input type="text"
+id="editWA"
+placeholder="Nomor WhatsApp">
+
+<input type="text"
+id="editEmail"
+placeholder="Email">
+
+<input type="text"
+id="editAddress"
+placeholder="Alamat">
+
+<button onclick="saveData()">
+Simpan Perubahan
+</button>
+
+<button onclick="logoutOwner()">
+Logout
+</button>
+
+</div>
+
+<script>
+
+/* =========================
+ANTI INSPECT BASIC
+========================= */
+
+document.addEventListener('contextmenu', function(e){
+e.preventDefault();
+});
+
+document.onkeydown = function(e){
+
+if(e.keyCode == 123){
+return false;
+}
+
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+return false;
+}
+
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+return false;
+}
+
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+return false;
+}
+
+}
+
+/* =========================
+OWNER PASSWORD
+========================= */
+
+const OWNER_PASSWORD = "Pejoh1234";
+
+/* =========================
+LOGIN PANEL
+========================= */
+
+function openLogin(){
+document.getElementById('loginBox').classList.remove('hidden');
+}
+
+function loginOwner(){
+
+const pass =
+document.getElementById('ownerPassword').value;
+
+if(pass === OWNER_PASSWORD){
+
+document.getElementById('loginBox')
+.classList.add('hidden');
+
+document.getElementById('panel')
+.classList.add('active');
+
+loadInputs();
+
+}else{
+
+alert('Password salah');
+
+}
+
+}
+
+function logoutOwner(){
+
+document.getElementById('panel')
+.classList.remove('active');
+
+}
+
+/* =========================
+SAVE DATA
+========================= */
+
+function saveData(){
+
+localStorage.setItem(
+'brandName',
+document.getElementById('editTitle').value
+);
+
+localStorage.setItem(
+'heroDesc',
+document.getElementById('editDesc').value
+);
+
+localStorage.setItem(
+'facebookLink',
+document.getElementById('editFacebook').value
+);
+
+localStorage.setItem(
+'waLink',
+document.getElementById('editWA').value
+);
+
+localStorage.setItem(
+'emailData',
+document.getElementById('editEmail').value
+);
+
+localStorage.setItem(
+'addressData',
+document.getElementById('editAddress').value
+);
+
+loadWebsite();
+
+alert('Perubahan berhasil disimpan');
+
+}
+
+/* =========================
+LOAD WEBSITE
+========================= */
+
+function loadWebsite(){
+
+const brand =
+localStorage.getItem('brandName');
+
+const desc =
+localStorage.getItem('heroDesc');
+
+const fb =
+localStorage.getItem('facebookLink');
+
+const wa =
+localStorage.getItem('waLink');
+
+const email =
+localStorage.getItem('emailData');
+
+const address =
+localStorage.getItem('addressData');
+
+if(brand){
+
+document.getElementById('brandName').innerText = brand;
+document.getElementById('heroTitle').innerText = brand;
+document.getElementById('businessName').innerText = brand;
+
+}
+
+if(desc){
+
+document.getElementById('heroDesc').innerText = desc;
+document.getElementById('aboutText').innerText = desc;
+
+}
+
+if(fb){
+
+document.getElementById('facebookBtn').href = fb;
+document.getElementById('fbText').innerText = fb;
+
+}
+
+if(wa){
+
+document.getElementById('waBtn').href = wa;
+document.getElementById('waText').innerText = wa;
+
+}
+
+if(email){
+
+document.getElementById('emailText').innerText = email;
+
+}
+
+if(address){
+
+document.getElementById('addressText').innerText = address;
+
+}
+
+}
+
+/* =========================
+LOAD INPUTS
+========================= */
+
+function loadInputs(){
+
+document.getElementById('editTitle').value =
+localStorage.getItem('brandName') || '';
+
+document.getElementById('editDesc').value =
+localStorage.getItem('heroDesc') || '';
+
+document.getElementById('editFacebook').value =
+localStorage.getItem('facebookLink') || '';
+
+document.getElementById('editWA').value =
+localStorage.getItem('waLink') || '';
+
+document.getElementById('editEmail').value =
+localStorage.getItem('emailData') || '';
+
+document.getElementById('editAddress').value =
+localStorage.getItem('addressData') || '';
+
+}
+
+loadWebsite();
+
+</script>
 
 </body>
 </html>
