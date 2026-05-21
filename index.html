@@ -6,7 +6,7 @@
 
 <title>Sejahtera Selalu</title>
 
-<meta name="description" content="Website resmi Sejahtera Selalu untuk kebutuhan media digital dan Meta Business verification.">
+<meta name="description" content="Website resmi Sejahtera Selalu untuk kebutuhan Meta Business dan digital platform verification.">
 
 <style>
 
@@ -17,6 +17,10 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#0f172a;
 color:white;
@@ -24,13 +28,55 @@ overflow-x:hidden;
 }
 
 /* =========================
-NAVBAR
+TOP RUNNING BAR
+========================= */
+
+.top-running-bar{
+width:100%;
+background:#2563eb;
+overflow:hidden;
+white-space:nowrap;
+position:fixed;
+top:0;
+left:0;
+z-index:99999;
+height:42px;
+display:flex;
+align-items:center;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.running-text{
+display:inline-block;
+padding-left:100%;
+animation:runningText 20s linear infinite;
+font-size:14px;
+font-weight:bold;
+color:white;
+}
+
+@keyframes runningText{
+
+0%{
+transform:translateX(0%);
+}
+
+100%{
+transform:translateX(-100%);
+}
+
+}
+
+/* =========================
+HEADER
 ========================= */
 
 header{
+margin-top:42px;
 width:100%;
-padding:20px 0;
-background:#111827;
+padding:18px 0;
+background:rgba(17,24,39,0.95);
+backdrop-filter:blur(10px);
 border-bottom:1px solid #1e293b;
 position:sticky;
 top:0;
@@ -38,7 +84,7 @@ z-index:999;
 }
 
 .container{
-width:90%;
+width:92%;
 max-width:1200px;
 margin:auto;
 }
@@ -47,6 +93,7 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
+gap:20px;
 }
 
 .logo{
@@ -56,13 +103,15 @@ font-weight:bold;
 
 .menu{
 display:flex;
-gap:20px;
+gap:18px;
+flex-wrap:wrap;
 }
 
 .menu a{
 color:#cbd5e1;
 text-decoration:none;
 transition:0.3s;
+font-size:15px;
 }
 
 .menu a:hover{
@@ -77,7 +126,7 @@ HERO
 padding:120px 20px;
 text-align:center;
 background:
-linear-gradient(rgba(15,23,42,0.8),rgba(15,23,42,0.9)),
+linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.95)),
 url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
@@ -86,28 +135,33 @@ background-position:center;
 .hero h1{
 font-size:60px;
 margin-bottom:20px;
+word-wrap:break-word;
 }
 
 .hero p{
 max-width:850px;
 margin:auto;
-line-height:1.8;
+line-height:1.9;
 color:#cbd5e1;
 font-size:18px;
 }
 
 .buttons{
 margin-top:40px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
 }
 
 .btn{
 display:inline-block;
-padding:15px 30px;
-margin:10px;
+padding:15px 28px;
 border-radius:12px;
 text-decoration:none;
 font-weight:bold;
 transition:0.3s;
+font-size:15px;
 }
 
 .btn-primary{
@@ -134,16 +188,17 @@ SECTION
 ========================= */
 
 section{
-padding:90px 0;
+padding:80px 0;
 }
 
 .section-title{
 text-align:center;
 margin-bottom:50px;
+padding:0 10px;
 }
 
 .section-title h2{
-font-size:40px;
+font-size:38px;
 margin-bottom:10px;
 }
 
@@ -152,60 +207,12 @@ color:#94a3b8;
 }
 
 /* =========================
-CARDS
-========================= */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#111827;
-padding:30px;
-border-radius:20px;
-border:1px solid #1e293b;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-border-color:#2563eb;
-}
-
-.card h3{
-margin-bottom:15px;
-}
-
-.card p{
-color:#94a3b8;
-line-height:1.7;
-}
-
-/* =========================
-ABOUT
-========================= */
-
-.about{
-text-align:center;
-max-width:900px;
-margin:auto;
-}
-
-.about p{
-line-height:1.9;
-color:#cbd5e1;
-font-size:17px;
-}
-
-/* =========================
-CONTACT
+CONTACT BOX
 ========================= */
 
 .contact-box{
 background:#111827;
-padding:40px;
+padding:35px;
 border-radius:20px;
 border:1px solid #1e293b;
 max-width:850px;
@@ -214,43 +221,18 @@ margin:auto;
 
 .contact-item{
 margin-bottom:20px;
+word-wrap:break-word;
 }
 
 .contact-item strong{
 display:block;
-margin-bottom:5px;
+margin-bottom:6px;
+font-size:15px;
 }
 
 .contact-item span{
 color:#94a3b8;
-}
-
-/* =========================
-BUSINESS HOURS
-========================= */
-
-.hours-box{
-margin-top:30px;
-padding:25px;
-background:#0b1220;
-border-radius:15px;
-border:1px solid #1e293b;
-}
-
-.hours-box h3{
-margin-bottom:20px;
-}
-
-.hours-item{
-display:flex;
-justify-content:space-between;
-padding:10px 0;
-border-bottom:1px solid #1e293b;
-color:#cbd5e1;
-}
-
-.hours-item:last-child{
-border-bottom:none;
+line-height:1.7;
 }
 
 /* =========================
@@ -258,10 +240,11 @@ FOOTER
 ========================= */
 
 footer{
-padding:30px;
+padding:30px 20px;
 text-align:center;
 color:#94a3b8;
 border-top:1px solid #1e293b;
+font-size:14px;
 }
 
 /* =========================
@@ -291,8 +274,9 @@ OWNER PANEL
 .panel{
 position:fixed;
 top:0;
-right:-420px;
-width:400px;
+right:-430px;
+width:410px;
+max-width:100%;
 height:100%;
 background:#111827;
 border-left:1px solid #1e293b;
@@ -319,6 +303,7 @@ border:none;
 border-radius:10px;
 background:#1e293b;
 color:white;
+font-size:14px;
 }
 
 .panel button{
@@ -331,6 +316,7 @@ color:white;
 font-weight:bold;
 cursor:pointer;
 margin-bottom:10px;
+font-size:14px;
 }
 
 /* =========================
@@ -344,6 +330,7 @@ background:rgba(0,0,0,0.8);
 display:flex;
 justify-content:center;
 align-items:center;
+padding:20px;
 z-index:20000;
 }
 
@@ -351,7 +338,8 @@ z-index:20000;
 background:#111827;
 padding:30px;
 border-radius:20px;
-width:350px;
+width:100%;
+max-width:350px;
 border:1px solid #1e293b;
 }
 
@@ -386,8 +374,16 @@ RESPONSIVE
 
 @media(max-width:768px){
 
+.hero{
+padding:90px 15px;
+}
+
 .hero h1{
 font-size:42px;
+}
+
+.hero p{
+font-size:16px;
 }
 
 .menu{
@@ -398,8 +394,22 @@ display:none;
 width:100%;
 }
 
-.hours-item{
-font-size:14px;
+.section-title h2{
+font-size:30px;
+}
+
+.contact-box{
+padding:25px;
+}
+
+.owner-btn{
+width:55px;
+height:55px;
+font-size:20px;
+}
+
+.running-text{
+font-size:12px;
 }
 
 }
@@ -408,7 +418,62 @@ font-size:14px;
 </head>
 <body>
 
+<!-- =========================
+TOP RUNNING BAR
+========================= -->
+
+<div class="top-running-bar">
+
+<div class="running-text">
+
+<span id="liveDay">
+Senin
+</span>
+
+•
+
+<span id="liveClock">
+00:00:00
+</span>
+
+•
+
+<span id="liveDate">
+1 Januari 2026
+</span>
+
+•
+
+Official Digital Platform — Sejahtera Selalu
+
+•
+
+<span id="liveDay2">
+Senin
+</span>
+
+•
+
+<span id="liveClock2">
+00:00:00
+</span>
+
+•
+
+<span id="liveDate2">
+1 Januari 2026
+</span>
+
+</div>
+
+</div>
+
+<!-- =========================
+HEADER
+========================= -->
+
 <header>
+
 <div class="container navbar">
 
 <div class="logo" id="brandName">
@@ -416,13 +481,16 @@ Sejahtera Selalu
 </div>
 
 <div class="menu">
-<a href="#about">Tentang</a>
-<a href="#services">Layanan</a>
-<a href="#contact">Kontak</a>
+<a href="#contact">Informasi</a>
 </div>
 
 </div>
+
 </header>
+
+<!-- =========================
+HERO
+========================= -->
 
 <section class="hero">
 
@@ -444,14 +512,44 @@ dan komunikasi terpercaya untuk masyarakat luas.
 href="https://facebook.com/"
 target="_blank"
 class="btn btn-primary">
+
+<span id="facebookBtnText">
 Facebook Page
+</span>
+
 </a>
 
 <a id="waBtn"
 href="https://wa.me/628123456789"
 target="_blank"
 class="btn btn-secondary">
+
+<span id="waBtnText">
 WhatsApp
+</span>
+
+</a>
+
+<a id="customButton1"
+href="#"
+target="_blank"
+class="btn btn-secondary">
+
+<span id="customButton1Text">
+Instagram
+</span>
+
+</a>
+
+<a id="customButton2"
+href="#"
+target="_blank"
+class="btn btn-secondary">
+
+<span id="customButton2Text">
+TikTok
+</span>
+
 </a>
 
 </div>
@@ -460,13 +558,17 @@ WhatsApp
 
 </section>
 
+<!-- =========================
+CONTACT
+========================= -->
+
 <section id="contact">
 
 <div class="container">
 
 <div class="section-title">
 <h2>Informasi Bisnis</h2>
-<p>Data resmi untuk Meta Business</p>
+<p>Data resmi platform digital</p>
 </div>
 
 <div class="contact-box">
@@ -506,64 +608,27 @@ facebook.com/sejahteraselalu
 </span>
 </div>
 
-<!-- =========================
-BUSINESS HOURS
-========================= -->
-
-<div class="hours-box">
-
-<h3>Jam Operasional</h3>
-
-<div class="hours-item">
-<span>Senin</span>
-<span>08:00 - 22:00</span>
-</div>
-
-<div class="hours-item">
-<span>Selasa</span>
-<span>08:00 - 22:00</span>
-</div>
-
-<div class="hours-item">
-<span>Rabu</span>
-<span>08:00 - 22:00</span>
-</div>
-
-<div class="hours-item">
-<span>Kamis</span>
-<span>08:00 - 22:00</span>
-</div>
-
-<div class="hours-item">
-<span>Jumat</span>
-<span>08:00 - 22:00</span>
-</div>
-
-<div class="hours-item">
-<span>Sabtu</span>
-<span>09:00 - 23:00</span>
-</div>
-
-<div class="hours-item">
-<span>Minggu</span>
-<span>09:00 - 21:00</span>
-</div>
-
-</div>
-
 </div>
 
 </div>
 
 </section>
 
-<footer>
+<footer id="footerText">
 © 2026 Sejahtera Selalu — Official Website
 </footer>
+
+<!-- =========================
+OWNER BUTTON
+========================= -->
 
 <button class="owner-btn" onclick="openLogin()">
 ⚙
 </button>
+
+<!-- =========================
+LOGIN
+========================= -->
 
 <div class="login-box hidden" id="loginBox">
 
@@ -600,36 +665,86 @@ Masuk
 
 </div>
 
+<!-- =========================
+OWNER PANEL
+========================= -->
+
 <div class="panel" id="panel">
 
 <h2>Owner Panel</h2>
 
 <input type="text"
 id="editTitle"
-placeholder="Nama Brand">
+placeholder="Nama Brand / Bisnis">
 
 <textarea id="editDesc"
 rows="5"
-placeholder="Deskripsi"></textarea>
+placeholder="Deskripsi Website"></textarea>
+
+<input type="text"
+id="editFacebookText"
+placeholder="Text Tombol Facebook">
 
 <input type="text"
 id="editFacebook"
-placeholder="Link Facebook">
+placeholder="URL Facebook">
+
+<input type="text"
+id="editWAText"
+placeholder="Text Tombol WhatsApp">
 
 <input type="text"
 id="editWA"
-placeholder="Nomor WhatsApp">
+placeholder="URL WhatsApp">
 
 <input type="text"
 id="editEmail"
-placeholder="Email">
+placeholder="Email Bisnis">
 
 <input type="text"
 id="editAddress"
-placeholder="Alamat">
+placeholder="Alamat Bisnis">
+
+<input type="text"
+id="editFooter"
+placeholder="Text Footer Website">
+
+<hr style="margin:25px 0;border:1px solid #1e293b;">
+
+<h2>Custom Button 1</h2>
+
+<input type="text"
+id="customBtn1Text"
+placeholder="Nama Tombol">
+
+<input type="text"
+id="customBtn1Url"
+placeholder="URL Tombol">
+
+<h2>Custom Button 2</h2>
+
+<input type="text"
+id="customBtn2Text"
+placeholder="Nama Tombol">
+
+<input type="text"
+id="customBtn2Url"
+placeholder="URL Tombol">
+
+<hr style="margin:25px 0;border:1px solid #1e293b;">
+
+<h2>Ganti Password</h2>
+
+<input type="password"
+id="newPassword"
+placeholder="Password Baru">
+
+<button onclick="changePassword()">
+Ganti Password
+</button>
 
 <button onclick="saveData()">
-Simpan Perubahan
+Simpan Semua Perubahan
 </button>
 
 <button onclick="logoutOwner()">
@@ -639,6 +754,10 @@ Logout
 </div>
 
 <script>
+
+/* =========================
+ANTI INSPECT BASIC
+========================= */
 
 document.addEventListener('contextmenu', function(e){
 e.preventDefault();
@@ -664,7 +783,16 @@ return false;
 
 }
 
-const OWNER_PASSWORD = "Pejoh1234";
+/* =========================
+PASSWORD SYSTEM
+========================= */
+
+let OWNER_PASSWORD =
+localStorage.getItem('ownerPassword') || "Pejoh1234";
+
+/* =========================
+LOGIN
+========================= */
 
 function openLogin(){
 document.getElementById('loginBox').classList.remove('hidden');
@@ -687,6 +815,8 @@ document.getElementById('loginBox')
 document.getElementById('panel')
 .classList.add('active');
 
+loadInputs();
+
 }else{
 
 alert('Password salah');
@@ -701,6 +831,361 @@ document.getElementById('panel')
 .classList.remove('active');
 
 }
+
+/* =========================
+CHANGE PASSWORD
+========================= */
+
+function changePassword(){
+
+const newPass =
+document.getElementById('newPassword').value;
+
+if(newPass.length < 4){
+
+alert('Password minimal 4 karakter');
+return;
+
+}
+
+localStorage.setItem('ownerPassword', newPass);
+
+OWNER_PASSWORD = newPass;
+
+alert('Password berhasil diganti');
+
+document.getElementById('newPassword').value = '';
+
+}
+
+/* =========================
+SAVE DATA
+========================= */
+
+function saveData(){
+
+localStorage.setItem(
+'brandName',
+document.getElementById('editTitle').value
+);
+
+localStorage.setItem(
+'heroDesc',
+document.getElementById('editDesc').value
+);
+
+localStorage.setItem(
+'facebookLink',
+document.getElementById('editFacebook').value
+);
+
+localStorage.setItem(
+'facebookBtnText',
+document.getElementById('editFacebookText').value
+);
+
+localStorage.setItem(
+'waBtnText',
+document.getElementById('editWAText').value
+);
+
+localStorage.setItem(
+'waLink',
+document.getElementById('editWA').value
+);
+
+localStorage.setItem(
+'emailData',
+document.getElementById('editEmail').value
+);
+
+localStorage.setItem(
+'addressData',
+document.getElementById('editAddress').value
+);
+
+localStorage.setItem(
+'footerData',
+document.getElementById('editFooter').value
+);
+
+localStorage.setItem(
+'customBtn1Text',
+document.getElementById('customBtn1Text').value
+);
+
+localStorage.setItem(
+'customBtn1Url',
+document.getElementById('customBtn1Url').value
+);
+
+localStorage.setItem(
+'customBtn2Text',
+document.getElementById('customBtn2Text').value
+);
+
+localStorage.setItem(
+'customBtn2Url',
+document.getElementById('customBtn2Url').value
+);
+
+loadWebsite();
+
+alert('Perubahan berhasil disimpan');
+
+}
+
+/* =========================
+LOAD WEBSITE
+========================= */
+
+function loadWebsite(){
+
+const brand =
+localStorage.getItem('brandName');
+
+const desc =
+localStorage.getItem('heroDesc');
+
+const fb =
+localStorage.getItem('facebookLink');
+
+const fbText =
+localStorage.getItem('facebookBtnText');
+
+const wa =
+localStorage.getItem('waLink');
+
+const waText =
+localStorage.getItem('waBtnText');
+
+const email =
+localStorage.getItem('emailData');
+
+const address =
+localStorage.getItem('addressData');
+
+const footer =
+localStorage.getItem('footerData');
+
+const custom1Text =
+localStorage.getItem('customBtn1Text');
+
+const custom1Url =
+localStorage.getItem('customBtn1Url');
+
+const custom2Text =
+localStorage.getItem('customBtn2Text');
+
+const custom2Url =
+localStorage.getItem('customBtn2Url');
+
+if(brand){
+
+document.getElementById('brandName').innerText = brand;
+document.getElementById('heroTitle').innerText = brand;
+document.getElementById('businessName').innerText = brand;
+
+}
+
+if(desc){
+
+document.getElementById('heroDesc').innerText = desc;
+
+}
+
+if(fb){
+
+document.getElementById('facebookBtn').href = fb;
+document.getElementById('fbText').innerText = fb;
+
+}
+
+if(fbText){
+
+document.getElementById('facebookBtnText').innerText = fbText;
+
+}
+
+if(wa){
+
+document.getElementById('waBtn').href = wa;
+document.getElementById('waText').innerText = wa;
+
+}
+
+if(waText){
+
+document.getElementById('waBtnText').innerText = waText;
+
+}
+
+if(email){
+
+document.getElementById('emailText').innerText = email;
+
+}
+
+if(address){
+
+document.getElementById('addressText').innerText = address;
+
+}
+
+if(footer){
+
+document.getElementById('footerText').innerText = footer;
+
+}
+
+if(custom1Text){
+
+document.getElementById('customButton1Text').innerText = custom1Text;
+
+}
+
+if(custom1Url){
+
+document.getElementById('customButton1').href = custom1Url;
+
+}
+
+if(custom2Text){
+
+document.getElementById('customButton2Text').innerText = custom2Text;
+
+}
+
+if(custom2Url){
+
+document.getElementById('customButton2').href = custom2Url;
+
+}
+
+}
+
+/* =========================
+LOAD INPUTS
+========================= */
+
+function loadInputs(){
+
+document.getElementById('editTitle').value =
+localStorage.getItem('brandName') || '';
+
+document.getElementById('editDesc').value =
+localStorage.getItem('heroDesc') || '';
+
+document.getElementById('editFacebook').value =
+localStorage.getItem('facebookLink') || '';
+
+document.getElementById('editFacebookText').value =
+localStorage.getItem('facebookBtnText') || '';
+
+document.getElementById('editWA').value =
+localStorage.getItem('waLink') || '';
+
+document.getElementById('editWAText').value =
+localStorage.getItem('waBtnText') || '';
+
+document.getElementById('editEmail').value =
+localStorage.getItem('emailData') || '';
+
+document.getElementById('editAddress').value =
+localStorage.getItem('addressData') || '';
+
+document.getElementById('editFooter').value =
+localStorage.getItem('footerData') || '';
+
+document.getElementById('customBtn1Text').value =
+localStorage.getItem('customBtn1Text') || '';
+
+document.getElementById('customBtn1Url').value =
+localStorage.getItem('customBtn1Url') || '';
+
+document.getElementById('customBtn2Text').value =
+localStorage.getItem('customBtn2Text') || '';
+
+document.getElementById('customBtn2Url').value =
+localStorage.getItem('customBtn2Url') || '';
+
+}
+
+/* =========================
+REALTIME RUNNING CLOCK
+========================= */
+
+function updateClock(){
+
+const now = new Date();
+
+const hari = [
+'Minggu',
+'Senin',
+'Selasa',
+'Rabu',
+'Kamis',
+'Jumat',
+'Sabtu'
+];
+
+const bulan = [
+'Januari',
+'Februari',
+'Maret',
+'April',
+'Mei',
+'Juni',
+'Juli',
+'Agustus',
+'September',
+'Oktober',
+'November',
+'Desember'
+];
+
+const day =
+hari[now.getDay()];
+
+const date =
+now.getDate();
+
+const month =
+bulan[now.getMonth()];
+
+const year =
+now.getFullYear();
+
+const hours =
+String(now.getHours()).padStart(2,'0');
+
+const minutes =
+String(now.getMinutes()).padStart(2,'0');
+
+const seconds =
+String(now.getSeconds()).padStart(2,'0');
+
+const fullClock =
+hours + ':' + minutes + ':' + seconds;
+
+const fullDate =
+date + ' ' + month + ' ' + year;
+
+document.getElementById('liveDay').innerText = day;
+document.getElementById('liveClock').innerText = fullClock;
+document.getElementById('liveDate').innerText = fullDate;
+
+document.getElementById('liveDay2').innerText = day;
+document.getElementById('liveClock2').innerText = fullClock;
+document.getElementById('liveDate2').innerText = fullDate;
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+loadWebsite();
 
 </script>
 
